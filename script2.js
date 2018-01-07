@@ -16,6 +16,6 @@ function showClasses(){
                 return -1;
             }
         }).slice(0,5);
-        
+        console.log(filterredArray)
     }
 }
