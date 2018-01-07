@@ -21,7 +21,7 @@ function showClasses(){
             }
         }).slice(0,5);
         var element = $("<div></div>");
-        var table = $("<table></table>");
+        var table = $('<table class="table table-striped"></table>');
         for(var j=0;j<filterredArray.length;j++){
             var tableRow = $("<tr></tr>");
             tableRow.append("<td>" + filterredArray[j].学科番号 + "</td>");
