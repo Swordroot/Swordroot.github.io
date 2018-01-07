@@ -16,6 +16,16 @@ function showClasses(){
                 return -1;
             }
         }).slice(0,5);
-        console.log(filterredArray)
+        var element = $("<div></div>");
+        var table = $("<table></table>");
+        for(var j=0;j<filterredArray.length;j++){
+            var tableRow = $("<tr></tr>");
+            tableRow.append("<td>" + filterredArray[j].学科番号 + "</td>");
+            tableRow.append("<td>" + filterredArray[j].月 + "月" + filterredArray[j].日 + "日</td>")
+            tableRow.append("<td>" + filterredArray[j].時限 + "限</td>");
+            table.append(tableRow);
+        }
+        element.append(table);
+        $("body").append(element);
     }
 }
