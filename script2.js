@@ -5,6 +5,8 @@ var day = today.getDay();
 
 var md = month * 100 + day;
 
+showClasses();
+
 function showClasses(){
     for(var i = 1;i<=10;i++){
         var filterredArray = classesData.filter(function(element){
