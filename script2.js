@@ -19,7 +19,13 @@ function showClasses(){
             }else{
                 return -1;
             }
-        }).slice(0,5);
+        }).slice(0,5).sort(function(a,b){
+            if(a.月日 > b.月日){
+                return 1;
+            }else{
+                return -1;
+            }
+        });
         var element = $("<div></div>");
         var table = $('<table class="table table-striped"></table>');
         for(var j=0;j<filterredArray.length;j++){
