@@ -5,7 +5,7 @@ var day = today.getDate();
 
 var md = month * 100 + day;
 
-showClasses();
+$(showClasses());
 
 function showClasses(){
     for(var i = 1;i<=10;i++){
