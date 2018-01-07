@@ -14,7 +14,7 @@ function showClasses(){
         var filterredArray = classesData.filter(function(element){
             return element.学科番号 == i && element.月日 > md;
         }).sort(function(a,b){
-            if(a.月日 > b.月日){
+            if(parseInt(a.月日) > parseInt(b.月日)){
                 return 1;
             }else{
                 return -1;
