@@ -10,7 +10,7 @@ $(function(){
 });
 
 function showClasses(){
-    for(var i = 1;i<=10;i++){
+    for(var i = 1;i<=16;i++){
         var filterredArray = classesData.filter(function(element){
             return element.学科番号 == i && element.月日 > md;
         }).sort(function(a,b){
