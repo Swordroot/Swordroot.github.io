@@ -11,6 +11,10 @@ $(function(){
 
 function showClasses(){
     for(var i = 1;i<=16;i++){
+        var tabElement = $('<li class="nav-item"></li>');
+        var anchorElement = $('<a href="#' + i.toString() + '" class="nav-link" data-toggle="tab">' + i.toString() + '</a>');
+        tabElement.append(anchorElement);
+        $('#tabs').append(tabElement);
         var filterredArray = classesData.filter(function(element){
             return element.学科番号 == i && element.月日 > md;
         }).sort(function(a,b){
@@ -26,7 +30,7 @@ function showClasses(){
                 return -1;
             }
         });
-        var element = $("<div></div>");
+        var element = $('<div id="' + i.toString() + '" class="tab-pane"></div>');
         var table = $('<table class="table table-striped"></table>');
         for(var j=0;j<filterredArray.length;j++){
             var tableRow = $("<tr></tr>");
@@ -36,6 +40,6 @@ function showClasses(){
             table.append(tableRow);
         }
         element.append(table);
-        $("body").append(element);
+        $('#content').append(element);
     }
 }
