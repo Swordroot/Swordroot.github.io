@@ -23,7 +23,7 @@ function showClasses(){
             }else{
                 return -1;
             }
-        }).slice(0,5).sort(function(a,b){
+        }).slice(0,10).sort(function(a,b){
             if(a.月日 > b.月日){
                 return 1;
             }else{
